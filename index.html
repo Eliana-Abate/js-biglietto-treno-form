@@ -6,30 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto Treno Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Faster+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header></header>
+    <header class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-8 d-flex align-items-center">
+                <img id="train-logo" src="./images/high-speed-train.jpg" alt="high-speed-train">
+                <span id="logo-title" class="fs-1 ps-3">High Speed Train</span>
+            </div>
+
+            <div class="col-12 pb-3 text-center col-md-4 pb-md-0 text-md-end">
+                <button type="button" class="sign-up-btn">Registrati</button>
+                <button type="button" class="sign-in-btn">Accedi</button>
+            </div>
+        </div>
+    </header>
 
     <main>
         <!-- FORM -->
-        <section class="container">
-            <div class="row text-center">
+        <section class="container py-5">
+            <div class="row text-center py-5">
                 <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
             </div>
 
-            <div class="row">
-                <div class="col-12 col-md-4">
+            <div class="row align-items-center form-data py-5">
+                <div class="col-12 text-start pb-3 col-md-4 text-md-center pb-md-0">
                     <label for="passenger-name">Nome Passeggero:</label>
                     <input type="text" id="passenger-name">
                 </div>
 
-                <div class="col-12 col-md-4">
-                    <label for="distance-km">Distanza da percorrere:</label>
+                <div class="col-12 text-start pb-3 col-md-4 text-md-center pb-md-0">
+                    <label for="distance-km">Distanza da percorrere (km):</label>
                     <input type="number" id="distance-km" min="2" step="1" value="2">
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 text-start pb-3 col-md-4 text-md-center pb-md-0">
                     <label for="age-range">Fascia d'età:</label>
                     <select id="age-range">
                         <option value="under-18">Under 18</option>
@@ -37,45 +53,53 @@
                         <option value="over-65">Over 65</option>
                     </select>
                 </div>
-            </div>
 
-            <div class="row">
-                <button type="button" id="buy-ticket">Acquista</button>
+                <div class="col-12 pt-5 text-center">
+                    <button type="button" id="buy-ticket" class="form-btn me-2">Acquista</button>
+                    <button type="button" class="form-btn ms-2">Reset</button>
+                </div>
             </div>
         </section>
 
         <!-- PRINTED TICKET -->
-        <section class="container">
+        <section class="container py-5">
 
-            <div class="row text-center">
+            <div class="row text-center pb-3">
                 <h2>IL TUO BIGLIETTO</h2>
             </div>
 
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <h4>Nome Passeggero</h4>
+            <div class="row align-items-center form-data py-5">
+                <div class="col-12 pb-5 col-md-4">
+                    <h5 class="mb-3">Nome Passeggero</h5>
                     <p id="passenger-name-ticket"></p>
                 </div>
 
-                <div class="col-6 col-md-2">
-                    <h4>Tariffa</h4>
+                <div class="col-6 pb-5 col-md-2">
+                    <h5 class="mb-3">Tariffa</h5>
                     <p id="discount-offer"></p>
                 </div>
-                <div class="col-6 col-md-2">
-                    <h4>Carrozza</h4>
+                <div class="col-6 pb-5 col-md-2">
+                    <h5 class="mb-3">Carrozza</h5>
                     <p id="car-number"></p>
                 </div>
-                <div class="col-6 col-md-2">
-                    <h4>Codice Treno</h4>
+                <div class="col-6 pb-5 col-md-2">
+                    <h5 class="mb-3">Codice Treno</h5>
                     <p id="train-number"></p>
                 </div>
-                <div class="col-6 col-md-2">
-                    <h4>Prezzo del bigletto</h4>
+                <div class="col-6 pb-5 col-md-2">
+                    <h5 class="mb-3">Prezzo del biglietto</h5>
                     <p id="ticket-price"></p>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="button" class="form-btn me-2"><i class="fas fa-download"></i>Download</button>
+                    <button type="button" class="form-btn ms-2"><i class="fas fa-print"></i>Stampa</button>
                 </div>
             </div>
         </section>
     </main>
+
+    
     
     <script src="./js/script.js"></script>
 </body>

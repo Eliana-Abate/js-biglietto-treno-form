@@ -1,0 +1,66 @@
+/* HEADER */
+
+#train-logo {
+    width: 120px; 
+}
+
+#logo-title {
+    font-family: 'Faster One', cursive;
+}
+
+.sign-up-btn {
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+}
+
+.sign-in-btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(92, 16, 16);
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.sign-in-btn:hover, .sign-up-btn:hover {
+    transform:scale(1.1);
+}
+
+.sign-up-btn:hover {
+    color: rgb(0, 17, 255);
+    border: 2px solid rgb(0, 17, 255);
+}
+
+
+main {
+    background-color: rgb(92, 16, 16);
+    color: white;
+}
+
+.form-data {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-btn {
+    width: 150px;
+    background-color: rgb(92, 16, 16);
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+.fas.fa-download, .fas.fa-print {
+    padding-right: 10px;
+}
