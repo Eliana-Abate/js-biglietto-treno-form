@@ -6,6 +6,7 @@
 //TODO 6. Condizione per verificare fascia di età e relativa tariffa.
 //TODO 7. Arrotondo il prezzo a due decimali.
 //TODO 8. Calcolo numero random per la carrozza e il codice treno.
+//TODO 9. Stampo in Html.
 
 //! 1
 var passengerNameField = document.getElementById('passenger-name');
@@ -49,4 +50,11 @@ buyTicket.addEventListener('click', function (){
     //! 8 
     var randomCar = Math.floor(Math.random() * 12) + 1;
     var randomTrain = Math.floor(Math.random() * 999) + 9000;
+
+    //! 9 
+    passengerNameTicket.innerHTML = passengerNameValue;
+    discountOffer.innerHTML = offerDisplay;
+    carNumber.innerHTML = randomCar;
+    trainNumber.innerHTML = randomTrain;
+    ticketPrice.innerHTML = price;
 })
