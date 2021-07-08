@@ -2,7 +2,10 @@
 //TODO 2. Creo variabili per i dati nella sezione 'Printed Ticket'.
 //TODO 3. Lego un evento al button per recuperare i dati inseriti dall'utente.
 //TODO 4. All'interno dell'evento, creo nuove variabili per poter utilizzare i valori inseriti dall'utente nel form.
-//TODO 5. Calcolo del prezzo e variabile tariffa
+//TODO 5. Calcolo del prezzo e variabile tariffa.
+//TODO 6. Condizione per verificare fascia di età e relativa tariffa.
+//TODO 7. Arrotondo il prezzo a due decimali.
+//TODO 8. Calcolo numero random per la carrozza e il codice treno.
 
 //! 1
 var passengerNameField = document.getElementById('passenger-name');
@@ -30,6 +33,20 @@ buyTicket.addEventListener('click', function (){
     var price = 0.21 * distanceKmValue;
     var offerDisplay = 'Tariffa ordinaria';
 
+    //! 6 
+    if (ageRangeValue === 'under-18') {
+        price *= 0.80;
+        offerDisplay = 'Tariffa Under 18';
 
+    } else if (ageRangeValue === 'over-65') {
+        price *= 0.60;
+        offerDisplay = 'Tariffa Over 65';
+    }
 
+    //! 7
+    price = price.toFixed(2) + ' Euro';
+
+    //! 8 
+    var randomCar = Math.floor(Math.random() * 12) + 1;
+    var randomTrain = Math.floor(Math.random() * 999) + 9000;
 })
