@@ -60,7 +60,10 @@ main {
 }
 
 
-
 .fas.fa-download, .fas.fa-print {
     padding-right: 10px;
+}
+
+.hidden {
+    visibility: hidden;
 }

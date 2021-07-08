@@ -8,6 +8,7 @@
 //TODO 8. Calcolo numero random per la carrozza e il codice treno.
 //TODO 9. Stampo in Html.
 //TODO 10. Creo variabile ed evento per resettare i campi del form.
+//TODO 11. Creo variabile per modificare la visibilità della sezione ticket.
 
 //! 1
 var passengerNameField = document.getElementById('passenger-name');
@@ -22,6 +23,7 @@ var discountOffer = document.getElementById('discount-offer');
 var carNumber = document.getElementById('car-number');
 var trainNumber = document.getElementById('train-number');
 var ticketPrice = document.getElementById('ticket-price');
+var ticketSection = document.getElementById('ticket-section');
 
 
 //! 3 
@@ -59,8 +61,14 @@ buyTicket.addEventListener('click', function (){
     carNumber.innerHTML = randomCar;
     trainNumber.innerHTML = randomTrain;
     ticketPrice.innerHTML = price;
+
+    //! 11
+    ticketSection.classList.remove('hidden');
+
 });
 
+
+//! 10
 resetButton.addEventListener('click', function (){
 
     passengerNameField.value = '';
@@ -68,4 +76,6 @@ resetButton.addEventListener('click', function (){
     ageRangeField.value = 'under-18';
 
 
+    //! 11
+    ticketSection.classList.add('hidden');
 });
