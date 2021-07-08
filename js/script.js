@@ -7,12 +7,14 @@
 //TODO 7. Arrotondo il prezzo a due decimali.
 //TODO 8. Calcolo numero random per la carrozza e il codice treno.
 //TODO 9. Stampo in Html.
+//TODO 10. Creo variabile ed evento per resettare i campi del form.
 
 //! 1
 var passengerNameField = document.getElementById('passenger-name');
 var distanceKmField = document.getElementById('distance-km');
 var ageRangeField = document.getElementById('age-range');
 var buyTicket = document.getElementById('buy-ticket');
+var resetButton = document.getElementById('reset');
 
 //! 2
 var passengerNameTicket = document.getElementById('passenger-name-ticket');
@@ -57,4 +59,13 @@ buyTicket.addEventListener('click', function (){
     carNumber.innerHTML = randomCar;
     trainNumber.innerHTML = randomTrain;
     ticketPrice.innerHTML = price;
-})
+});
+
+resetButton.addEventListener('click', function (){
+
+    passengerNameField.value = '';
+    distanceKmField.value = '2';
+    ageRangeField.value = 'under-18';
+
+
+});
